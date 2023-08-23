@@ -1,0 +1,7 @@
+{
+    "bench": "ahmedabad",
+    "diaryno": "240110500621",
+    "case_year": "2022",
+    "url": "https://nclt.gov.in/diary-number-wise",
+    "option_xpath": "//*[@id='block-casestatus--2']/div/ul/li[1]"
+}
