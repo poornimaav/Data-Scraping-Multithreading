@@ -43,7 +43,7 @@ def process_range(start_diary_number, end_diary_number, i):
 if __name__ == "__main__":
     num_processes = 2  # Number of processes to run concurrently
     start_diary_number = int(config["diaryno"]) + 1
-    end_diary_number = start_diary_number + 4
+    end_diary_number = start_diary_number + 1
 
     processes = []
     start_time = time.time()

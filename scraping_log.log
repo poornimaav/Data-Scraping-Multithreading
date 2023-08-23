@@ -13894,3 +13894,7 @@ Stacktrace:
 2023-08-23 17:38:53,589 - INFO: 240110500656 - Order/Judgement table data (including links) saved to outputs/order_judgement.csv
 2023-08-23 17:38:53,589 - INFO: 240110500656 - Iteration - 2 completed in 17.28 seconds for process 0 
 2023-08-23 17:38:59,853 - INFO: Time taken to all iterations 39.19 seconds
+2023-08-23 17:45:29,402 - INFO: 240110500658 - Iteration - 1 started for process 0 
+2023-08-23 17:45:35,905 - INFO: 240110500658 - No data found with this Diary Number.
+2023-08-23 17:45:35,905 - INFO: 240110500658 - Iteration - 1 completed in 6.5 seconds for process 0 
+2023-08-23 17:45:42,084 - INFO: Time taken to all iterations 14.49 seconds
