@@ -13844,3 +13844,53 @@ Stacktrace:
 2023-08-23 17:28:26,533 - INFO: 240110500651 - Order/Judgement table data (including links) saved to outputs/order_judgement.csv
 2023-08-23 17:28:26,534 - INFO: 240110500651 - Iteration - 3 completed in 14.95 seconds
 2023-08-23 17:28:32,751 - INFO: Time taken to all iterations 56.94 seconds
+2023-08-23 17:36:02,632 - INFO: 240110500652 - Iteration - 1 started for process 1 
+2023-08-23 17:36:02,632 - INFO: 240110500651 - Iteration - 1 started for process 0 
+2023-08-23 17:36:09,747 - INFO: 240110500652 - Data from main table successfully saved to outputs/output.csv
+2023-08-23 17:36:09,808 - INFO: 240110500652 - Clicked on status link
+2023-08-23 17:36:09,872 - INFO: 240110500651 - Data from main table successfully saved to outputs/output.csv
+2023-08-23 17:36:09,942 - INFO: 240110500651 - Clicked on status link
+2023-08-23 17:36:15,387 - INFO: 240110500652 - Data from details page saved to outputs/details.csv
+2023-08-23 17:36:15,624 - INFO: 240110500651 - Data from details page saved to outputs/details.csv
+2023-08-23 17:36:16,622 - INFO: 240110500652 - Order/Judgement table data (including links) saved to outputs/order_judgement.csv
+2023-08-23 17:36:16,623 - INFO: 240110500652 - Iteration - 1 completed in 13.99 seconds for process 1 
+2023-08-23 17:36:16,624 - INFO: 240110500654 - Iteration - 2 started for process 1 
+2023-08-23 17:36:16,769 - INFO: 240110500651 - Order/Judgement table data (including links) saved to outputs/order_judgement.csv
+2023-08-23 17:36:16,770 - INFO: 240110500651 - Iteration - 1 completed in 14.14 seconds for process 0 
+2023-08-23 17:36:16,771 - INFO: 240110500653 - Iteration - 2 started for process 0 
+2023-08-23 17:36:24,927 - INFO: 240110500654 - Data from main table successfully saved to outputs/output.csv
+2023-08-23 17:36:25,025 - INFO: 240110500654 - Clicked on status link
+2023-08-23 17:36:25,842 - INFO: 240110500653 - Data from main table successfully saved to outputs/output.csv
+2023-08-23 17:36:25,929 - INFO: 240110500653 - Clicked on status link
+2023-08-23 17:36:31,817 - INFO: 240110500654 - Data from details page saved to outputs/details.csv
+2023-08-23 17:36:32,190 - INFO: 240110500654 - Order/Judgement table data (including links) saved to outputs/order_judgement.csv
+2023-08-23 17:36:32,190 - INFO: 240110500654 - Iteration - 2 completed in 15.57 seconds for process 1 
+2023-08-23 17:36:33,730 - INFO: 240110500653 - Data from details page saved to outputs/details.csv
+2023-08-23 17:36:34,560 - INFO: 240110500653 - Order/Judgement table data (including links) saved to outputs/order_judgement.csv
+2023-08-23 17:36:34,560 - INFO: 240110500653 - Iteration - 2 completed in 17.79 seconds for process 0 
+2023-08-23 17:36:40,750 - INFO: Time taken to all iterations 40.04 seconds
+2023-08-23 17:38:22,515 - INFO: 240110500654 - Iteration - 1 started for process 0 
+2023-08-23 17:38:22,613 - INFO: 240110500655 - Iteration - 1 started for process 1 
+2023-08-23 17:38:29,452 - INFO: 240110500655 - Data from main table successfully saved to outputs/output.csv
+2023-08-23 17:38:29,543 - INFO: 240110500655 - Clicked on status link
+2023-08-23 17:38:29,979 - INFO: 240110500654 - Data from main table successfully saved to outputs/output.csv
+2023-08-23 17:38:30,091 - INFO: 240110500654 - Clicked on status link
+2023-08-23 17:38:35,227 - INFO: 240110500655 - Data from details page saved to outputs/details.csv
+2023-08-23 17:38:35,891 - INFO: 240110500654 - Data from details page saved to outputs/details.csv
+2023-08-23 17:38:36,309 - INFO: 240110500654 - Order/Judgement table data (including links) saved to outputs/order_judgement.csv
+2023-08-23 17:38:36,309 - INFO: 240110500654 - Iteration - 1 completed in 13.79 seconds for process 0 
+2023-08-23 17:38:36,309 - INFO: 240110500656 - Iteration - 2 started for process 0 
+2023-08-23 17:38:36,853 - INFO: 240110500655 - Order/Judgement table data (including links) saved to outputs/order_judgement.csv
+2023-08-23 17:38:36,854 - INFO: 240110500655 - Iteration - 1 completed in 14.24 seconds for process 1 
+2023-08-23 17:38:36,856 - INFO: 240110500657 - Iteration - 2 started for process 1 
+2023-08-23 17:38:44,584 - INFO: 240110500657 - Data from main table successfully saved to outputs/output.csv
+2023-08-23 17:38:44,673 - INFO: 240110500657 - Clicked on status link
+2023-08-23 17:38:44,729 - INFO: 240110500656 - Data from main table successfully saved to outputs/output.csv
+2023-08-23 17:38:44,846 - INFO: 240110500656 - Clicked on status link
+2023-08-23 17:38:50,943 - INFO: 240110500657 - Data from details page saved to outputs/details.csv
+2023-08-23 17:38:51,128 - INFO: 240110500656 - Data from details page saved to outputs/details.csv
+2023-08-23 17:38:51,304 - INFO: 240110500657 - Order/Judgement table data (including links) saved to outputs/order_judgement.csv
+2023-08-23 17:38:51,306 - INFO: 240110500657 - Iteration - 2 completed in 14.45 seconds for process 1 
+2023-08-23 17:38:53,589 - INFO: 240110500656 - Order/Judgement table data (including links) saved to outputs/order_judgement.csv
+2023-08-23 17:38:53,589 - INFO: 240110500656 - Iteration - 2 completed in 17.28 seconds for process 0 
+2023-08-23 17:38:59,853 - INFO: Time taken to all iterations 39.19 seconds

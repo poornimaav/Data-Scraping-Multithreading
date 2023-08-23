@@ -8,7 +8,7 @@ import multiprocessing
 
 logger = logging_utils.setup_logging('scraping_log.log')
 
-def process_range(start_diary_number, end_diary_number):
+def process_range(start_diary_number, end_diary_number, i):
     try:
         options = webdriver.ChromeOptions()
         options.add_experimental_option('excludeSwitches', ['enable-logging'])
@@ -22,7 +22,7 @@ def process_range(start_diary_number, end_diary_number):
             config_copy['diaryno'] = str(diary_number)
             write_config(config_copy)
             
-            logger.info("%s - Iteration - %d started", config_copy["diaryno"], count)
+            logger.info("%s - Iteration - %d started for process %d ", config_copy["diaryno"], count, i)
 
             start_time = time.time()
             scrape_data_from_current_page(driver, config_copy)
@@ -30,7 +30,7 @@ def process_range(start_diary_number, end_diary_number):
 
             loop_time = end_time - start_time
 
-            logger.info("%s - Iteration - %d completed in %s seconds", config_copy["diaryno"], count, round(loop_time, 2))
+            logger.info("%s - Iteration - %d completed in %s seconds for process %d ", config_copy["diaryno"], count, round(loop_time, 2), i)
             # time.sleep(5)
             count += 1
 
@@ -43,14 +43,14 @@ def process_range(start_diary_number, end_diary_number):
 if __name__ == "__main__":
     num_processes = 2  # Number of processes to run concurrently
     start_diary_number = int(config["diaryno"]) + 1
-    end_diary_number = start_diary_number + 6
+    end_diary_number = start_diary_number + 4
 
     processes = []
     start_time = time.time()
     for i in range(num_processes):
         start = start_diary_number + i
         end = end_diary_number
-        process = multiprocessing.Process(target=process_range, args=(start, end))
+        process = multiprocessing.Process(target=process_range, args=(start, end, i))
         processes.append(process)
         process.start()
 
