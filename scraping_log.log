@@ -13898,3 +13898,10 @@ Stacktrace:
 2023-08-23 17:45:35,905 - INFO: 240110500658 - No data found with this Diary Number.
 2023-08-23 17:45:35,905 - INFO: 240110500658 - Iteration - 1 completed in 6.5 seconds for process 0 
 2023-08-23 17:45:42,084 - INFO: Time taken to all iterations 14.49 seconds
+2023-08-23 17:46:52,342 - INFO: 240110500659 - Iteration - 1 started for process 0 
+2023-08-23 17:46:59,211 - INFO: 240110500659 - Data from main table successfully saved to outputs/output.csv
+2023-08-23 17:46:59,274 - INFO: 240110500659 - Clicked on status link
+2023-08-23 17:47:04,925 - INFO: 240110500659 - Data from details page saved to outputs/details.csv
+2023-08-23 17:47:06,181 - INFO: 240110500659 - Order/Judgement table data (including links) saved to outputs/order_judgement.csv
+2023-08-23 17:47:06,181 - INFO: 240110500659 - Iteration - 1 completed in 13.84 seconds for process 0 
+2023-08-23 17:47:12,381 - INFO: Time taken to all iterations 21.97 seconds
