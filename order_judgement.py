@@ -19,7 +19,7 @@ def scrape_order_judgment_table(driver, filing_number, diary_number):
         
         # Parse the page source with BeautifulSoup
         table_xpath = '//*[@id="collapseTwo"]/div/div/table'
-        table = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, '//*[@id="collapseTwo"]/div/div/table')))
+        table = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, table_xpath)))
         
         # table = driver.find_element(By.XPATH, table_xpath)
 
@@ -50,7 +50,7 @@ def scrape_order_judgment_table(driver, filing_number, diary_number):
         df3 = pd.DataFrame(table_data)
 
         csv_filename = "outputs/order_judgement.csv"
-        # last_serial_number = 0
+
 
         if os.path.isfile(csv_filename) and os.path.getsize(csv_filename) > 0:
             existing_df = pd.read_csv(csv_filename)

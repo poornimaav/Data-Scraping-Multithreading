@@ -1,6 +1,6 @@
 
 from utilities import automate_input_element, automate_selection
-from config_utils import read_config, config
+from config_utils import config
 from bs4 import BeautifulSoup
 import pandas as pd
 from selenium.webdriver.common.by import By
