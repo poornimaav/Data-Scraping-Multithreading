@@ -9,8 +9,8 @@ import threading
 
 file_lock = threading.Lock()
 
-def scrape_order_judgment_table(driver, filing_number, diary_number):
-    logger = logging_utils.setup_logging('scraping_log.log')
+def scrape_order_judgment_table(driver, filing_number, diary_number, logger, t):
+
     try: 
         serial_number = 1  
         expand_button = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, '//*[@id="headingTwo"]/h2/button'))) 
@@ -49,7 +49,7 @@ def scrape_order_judgment_table(driver, filing_number, diary_number):
 
         df3 = pd.DataFrame(table_data)
 
-        csv_filename = "outputs/order_judgement.csv"
+        csv_filename = f"outputs/{t}/order_judgement{t}.csv"
 
 
         if os.path.isfile(csv_filename) and os.path.getsize(csv_filename) > 0:

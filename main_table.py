@@ -7,14 +7,14 @@ from selenium.webdriver.common.by import By
 import os
 from selenium.common.exceptions import NoSuchElementException
 from details_table import scrape_data_from_details_page
-import logging_utils
 import threading
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 
-logger = logging_utils.setup_logging('scraping_log.log')
 
 file_lock = threading.Lock()
 
-def scrape_data_from_current_page(driver, config_copy):
+def scrape_data_from_current_page(driver, config_copy,logger, t):
    
     try:
         selection_values = {
@@ -41,6 +41,9 @@ def scrape_data_from_current_page(driver, config_copy):
         
         submit_button = driver.find_element(By.CLASS_NAME, "btn-default")
         submit_button.click()
+        
+        table_present = EC.presence_of_element_located((By.XPATH, "//*[@id='block-nclt-content']/div/div/div/table"))
+        WebDriverWait(driver, 10).until(table_present)
 
         headers = []  
         serial_number = 1
@@ -64,7 +67,7 @@ def scrape_data_from_current_page(driver, config_copy):
 
         # Create a DataFrame from the extracted table data
         df1 = pd.DataFrame(table_data)
-        csv_filename = "outputs/output.csv"
+        csv_filename = f"outputs/{t}/output{t}.csv"
 
         if len(headers) == len(df1.columns):
             df1.columns = headers
@@ -91,7 +94,7 @@ def scrape_data_from_current_page(driver, config_copy):
 
             serial_number += len(df1)
 
-            click_pending_status(driver, diary_number)
+            click_pending_status(driver, diary_number,logger, t)
             
         else:
              logger.info("%s - No data found with this Diary Number.", diary_number)
@@ -100,7 +103,7 @@ def scrape_data_from_current_page(driver, config_copy):
         logger.error("\nError occured while scraping main table: %s", str(e))
 
 
-def click_pending_status(driver, diary_number):
+def click_pending_status(driver, diary_number,logger,t):
 
     next_url = None
     try:
@@ -109,7 +112,7 @@ def click_pending_status(driver, diary_number):
         next_url = status_link.get_attribute("href")
         status_link.click()
         logger.info("%s - Clicked on status link", diary_number)
-        scrape_data_from_details_page(driver, next_url, diary_number)
+        scrape_data_from_details_page(driver, next_url, diary_number,logger, t)
     
     except NoSuchElementException:
         logger.info("%s - status link not found", diary_number)

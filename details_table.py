@@ -9,8 +9,7 @@ import threading
 
 file_lock = threading.Lock()
 
-def scrape_data_from_details_page(driver, details_page_url, diary_number):
-    logger = logging_utils.setup_logging('scraping_log.log')
+def scrape_data_from_details_page(driver, details_page_url, diary_number, logger, t):
     try:
         driver.get(details_page_url)
     
@@ -44,7 +43,7 @@ def scrape_data_from_details_page(driver, details_page_url, diary_number):
             filing_number = 0
 
         df = pd.DataFrame([details_data]) 
-        csv_filename = "outputs/details.csv"
+        csv_filename = f"outputs/{t}/details{t}.csv"
         serial_number = 1
 
         if os.path.isfile(csv_filename) and os.path.getsize(csv_filename) > 0:
@@ -67,7 +66,7 @@ def scrape_data_from_details_page(driver, details_page_url, diary_number):
         else:
             logger.info('%s - No Data Found on details page. Skipping current table', diary_number)
         # Call another function if needed
-        scrape_order_judgment_table(driver, filing_number, diary_number)
+        scrape_order_judgment_table(driver, filing_number, diary_number, logger, t )
         
     except NoSuchElementException as e:
        logger.error("%s - Error while scraping details page: %s", diary_number, str(e))
